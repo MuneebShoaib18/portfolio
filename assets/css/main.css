@@ -736,3 +736,28 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.about__wrapper {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  gap: 2rem;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+  .about__wrapper {
+      flex-direction: row; /* Arrange elements horizontally on larger screens */
+  }
+}
+
+.skills__wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap */
+  justify-content: space-between; /* Even spacing between columns */
+  gap: 20px; /* Space between columns */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .skills__wrapper {
+      flex-direction: column; /* Stack columns vertically */
+  }
+}
